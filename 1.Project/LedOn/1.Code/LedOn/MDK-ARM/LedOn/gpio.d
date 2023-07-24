@@ -25,4 +25,5 @@ ledon\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h
 ledon\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
 ledon\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 ledon\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
+ledon\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h
 ledon\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h

@@ -1,0 +1,94 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: muzi kfshakj, lskfhla, LIC=32B1Q-NEZLS-63DMB-24MY9-LU2XS-E14YW
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Standard  Version: 5.14.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DCM.DLL V1.13.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.14.0_KEIL
+Dialog DLL:      TCM.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+C:\Users\a9077\Desktop\learn\Chip\STM32F103C6T6\STM32F103C6T6A\1.Project\1838Test\MDK-ARM\1838Test.uvprojx
+Project File Date:  06/27/2023
+
+<h2>Output:</h2>
+Build target '1838Test'
+assembling startup_stm32f103x6.s...
+compiling HX1838.c...
+HX1838.c(58): error:  #20: identifier "TIM_HandleTypeDef" is undefined
+  void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+HX1838.c(79): error:  #20: identifier "TIM_HandleTypeDef" is undefined
+  void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
+HX1838.c(88): warning:  #223-D: function "HAL_TIM_ReadCapturedValue" declared implicitly
+                  tmp_cnt_l = HAL_TIM_ReadCapturedValue(&htim1,TIM_CHANNEL_1);                                    //记录当前时刻
+HX1838.c(88): error:  #20: identifier "htim1" is undefined
+                  tmp_cnt_l = HAL_TIM_ReadCapturedValue(&htim1,TIM_CHANNEL_1);                                    //记录当前时刻
+HX1838.c(88): error:  #20: identifier "TIM_CHANNEL_1" is undefined
+                  tmp_cnt_l = HAL_TIM_ReadCapturedValue(&htim1,TIM_CHANNEL_1);                                    //记录当前时刻
+HX1838.c(89): warning:  #223-D: function "TIM_RESET_CAPTUREPOLARITY" declared implicitly
+                  TIM_RESET_CAPTUREPOLARITY(&htim1, TIM_CHANNEL_1);                                               //复位极性配置
+HX1838.c(90): warning:  #223-D: function "TIM_SET_CAPTUREPOLARITY" declared implicitly
+                  TIM_SET_CAPTUREPOLARITY(&htim1, TIM_CHANNEL_1, TIM_INPUTCHANNELPOLARITY_RISING);                //改变极性
+HX1838.c(90): error:  #20: identifier "TIM_INPUTCHANNELPOLARITY_RISING" is undefined
+                  TIM_SET_CAPTUREPOLARITY(&htim1, TIM_CHANNEL_1, TIM_INPUTCHANNELPOLARITY_RISING);                //改变极性
+HX1838.c(109): error:  #20: identifier "TIM_ICPOLARITY_FALLING" is undefined
+                  TIM_SET_CAPTUREPOLARITY(&htim1, TIM_CHANNEL_1, TIM_ICPOLARITY_FALLING);
+HX1838.c(133): warning:  #223-D: function "HAL_TIM_Base_Start_IT" declared implicitly
+      HAL_TIM_Base_Start_IT(&htim1);
+HX1838.c(133): error:  #20: identifier "htim1" is undefined
+      HAL_TIM_Base_Start_IT(&htim1);
+HX1838.c(134): warning:  #223-D: function "HAL_TIM_IC_Start_IT" declared implicitly
+      HAL_TIM_IC_Start_IT(&htim1,TIM_CHANNEL_1);
+HX1838.c(134): error:  #20: identifier "TIM_CHANNEL_1" is undefined
+      HAL_TIM_IC_Start_IT(&htim1,TIM_CHANNEL_1);
+HX1838.c(293): warning:  #1-D: last line of file ends without a newline
+  }
+HX1838.c: 6 warnings, 8 errors
+compiling main.c...
+compiling gpio.c...
+compiling tim.c...
+compiling stm32f1xx_it.c...
+compiling system_stm32f1xx.c...
+compiling stm32f1xx_ll_gpio.c...
+compiling stm32f1xx_ll_pwr.c...
+compiling stm32f1xx_ll_exti.c...
+compiling stm32f1xx_ll_tim.c...
+compiling stm32f1xx_ll_dma.c...
+compiling stm32f1xx_ll_rcc.c...
+compiling stm32f1xx_ll_utils.c...
+"1838Test\1838Test.axf" - 8 Error(s), 6 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.2.0.pack
+                ARM::CMSIS:CORE:3.40.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 3.40.0
+
+<h2>Collection of Component include folders:</h2>
+  C:\Users\a9077\Desktop\learn\Chip\STM32F103C6T6\STM32F103C6T6A\1.Project\1838Test\MDK-ARM\RTE
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.0
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:3.40.0
+      Source file:   CMSIS\UserCodeTemplates\ARM\ITM_Retarget.c
+Target not created.
+</pre>
+</body>
+</html>

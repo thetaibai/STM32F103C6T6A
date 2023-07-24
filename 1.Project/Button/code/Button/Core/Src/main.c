@@ -18,12 +18,12 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "usart.h"
+#include "tim.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "OS.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -55,9 +55,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void ButtonTask(void);
 
-uint8_t button[4] = {0, 0, 0, 0};
 /* USER CODE END 0 */
 
 /**
@@ -88,7 +86,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_USART2_UART_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -97,7 +95,10 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-		ButtonTask();
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
+	  OS();
   }
   /* USER CODE END 3 */
 }
@@ -119,7 +120,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI_DIV2;
-  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL16;
+  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL8;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -131,62 +132,22 @@ void SystemClock_Config(void)
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
   {
     Error_Handler();
   }
 }
 
 /* USER CODE BEGIN 4 */
-void ButtonTask(void)
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
+	if (htim->Instance == TIM2)
+	{
 
-	if (1 == (button[0]|button[1]|button[2]|button[3]))
-	{
-			HAL_Delay(10);
-			if (1 == HAL_GPIO_ReadPin(Key1_GPIO_Port, Key1_Pin))
-			{
-				HAL_GPIO_TogglePin(Led_GPIO_Port, Led_Pin);
-				button[0] = 0;
-			}
-			if (1 == HAL_GPIO_ReadPin(Key2_GPIO_Port, Key2_Pin))
-			{
-				HAL_GPIO_TogglePin(Led_GPIO_Port, Led_Pin);
-				button[1] = 0;
-			}
-			if (1 == HAL_GPIO_ReadPin(Key3_GPIO_Port, Key3_Pin))
-			{
-				HAL_GPIO_TogglePin(Led_GPIO_Port, Led_Pin);
-				button[2] = 0;
-			}
-			if (1 == HAL_GPIO_ReadPin(Key4_GPIO_Port, Key4_Pin))
-			{
-				HAL_GPIO_TogglePin(Led_GPIO_Port, Led_Pin);
-				button[3] = 0;
-			}
-	}	
-}
-
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-  if(Key1_Pin == GPIO_Pin)
-	{
-		button[0] = 1;
-	}
-	if(Key2_Pin == GPIO_Pin)
-	{
-		button[1] = 1;
-	}
-	if(Key3_Pin == GPIO_Pin)
-	{
-		button[2] = 1;
-	}
-	if(Key4_Pin == GPIO_Pin)
-	{
-		button[3] = 1;
+		LittleHeartFunc();
 	}
 }
 /* USER CODE END 4 */

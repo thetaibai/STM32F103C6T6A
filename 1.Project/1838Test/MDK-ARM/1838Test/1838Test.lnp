@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"1838test\startup_stm32f103x6.o"
+"1838test\hx1838.o"
+"1838test\main.o"
+"1838test\gpio.o"
+"1838test\tim.o"
+"1838test\stm32f1xx_it.o"
+"1838test\stm32f1xx_hal_msp.o"
+"1838test\stm32f1xx_hal_gpio_ex.o"
+"1838test\stm32f1xx_hal_tim.o"
+"1838test\stm32f1xx_hal_tim_ex.o"
+"1838test\stm32f1xx_hal.o"
+"1838test\stm32f1xx_hal_rcc.o"
+"1838test\stm32f1xx_hal_rcc_ex.o"
+"1838test\stm32f1xx_hal_gpio.o"
+"1838test\stm32f1xx_hal_dma.o"
+"1838test\stm32f1xx_hal_cortex.o"
+"1838test\stm32f1xx_hal_pwr.o"
+"1838test\stm32f1xx_hal_flash.o"
+"1838test\stm32f1xx_hal_flash_ex.o"
+"1838test\stm32f1xx_hal_exti.o"
+"1838test\system_stm32f1xx.o"
+--strict --scatter "1838Test\1838Test.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "1838Test.map" -o 1838Test\1838Test.axf

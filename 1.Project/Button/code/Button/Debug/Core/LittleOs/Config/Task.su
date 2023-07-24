@@ -1,0 +1,6 @@
+../Core/LittleOs/Config/Task.c:41:6:OS_1ms	4	static
+../Core/LittleOs/Config/Task.c:54:6:OS_2ms	4	static
+../Core/LittleOs/Config/Task.c:67:6:OS_4ms1	4	static
+../Core/LittleOs/Config/Task.c:80:6:OS_8ms3	8	static
+../Core/LittleOs/Config/Task.c:94:6:OS_8ms7	4	static
+../Core/LittleOs/Config/Task.c:107:6:OS_Idle	4	static

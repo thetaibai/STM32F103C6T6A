@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"littleos_demo\startup_stm32f103x6.o"
+"littleos_demo\task.o"
+"littleos_demo\os.o"
+"littleos_demo\main.o"
+"littleos_demo\gpio.o"
+"littleos_demo\tim.o"
+"littleos_demo\stm32f1xx_it.o"
+"littleos_demo\stm32f1xx_hal_msp.o"
+"littleos_demo\stm32f1xx_hal_gpio_ex.o"
+"littleos_demo\stm32f1xx_hal_tim.o"
+"littleos_demo\stm32f1xx_hal_tim_ex.o"
+"littleos_demo\stm32f1xx_hal.o"
+"littleos_demo\stm32f1xx_hal_rcc.o"
+"littleos_demo\stm32f1xx_hal_rcc_ex.o"
+"littleos_demo\stm32f1xx_hal_gpio.o"
+"littleos_demo\stm32f1xx_hal_dma.o"
+"littleos_demo\stm32f1xx_hal_cortex.o"
+"littleos_demo\stm32f1xx_hal_pwr.o"
+"littleos_demo\stm32f1xx_hal_flash.o"
+"littleos_demo\stm32f1xx_hal_flash_ex.o"
+"littleos_demo\stm32f1xx_hal_exti.o"
+"littleos_demo\system_stm32f1xx.o"
+--strict --scatter "LittleOs_Demo\LittleOs_Demo.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "LittleOs_Demo.map" -o LittleOs_Demo\LittleOs_Demo.axf

@@ -452,17 +452,17 @@ ARM Macro Assembler    Page 7
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=ledon\startup_stm32f103x6.d -oledon\startup_stm32f103x6.o -IC:\Use
-rs\a9077\Desktop\learn\Chip\STM32F103C6T6\1.Project\LedOn\1.Code\LedOn\MDK-ARM\
+rs\a9077\Desktop\learn\Chip\STM32F103C6T6\STM32F103C6T6A\1.Project\LedOn\1.Code
 
 
 
 ARM Macro Assembler    Page 8 
 
 
-RTE -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\K
-eil\STM32F1xx_DFP\2.4.0 --predefine="__UVISION_VERSION SETA 514" --predefine="_
-RTE_ SETA 1" --predefine="STM32F10X_LD SETA 1" --list=startup_stm32f103x6.lst s
-tartup_stm32f103x6.s
+\LedOn\MDK-ARM\RTE -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include -IC:\Kei
+l_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.0 --predefine="__UVISION_VERSION SETA 514"
+ --predefine="_RTE_ SETA 1" --predefine="STM32F10X_LD SETA 1" --list=startup_st
+m32f103x6.lst startup_stm32f103x6.s
 
 
 
