@@ -28,17 +28,22 @@ void ButtonTask(void)
 	GetPinState();
 	for(i = Key1; i < KeyNum ; i++)
 	{
+		if (GPIO_PIN_SET == ButtonTable[i].PinState)
+		{
+			ButtonTable[i].Cnt++;
+		}
+		else if (GPIO_PIN_RESET == ButtonTable[i].PinState)
+		{
+			ButtonTable[i].Cnt = 0;
+		}
+
 		if (3 < ButtonTable[i].Cnt)
 		{
 			ButtonTable[i].State = Press;
 		}
-		else if (GPIO_PIN_SET == ButtonTable[i].PinState)
-		{
-			ButtonTable[i].Cnt++;
-		}
 		else
 		{
-			ButtonTable[i].Cnt = 0;
+			ButtonTable[i].State = NoPress;
 		}
 	}
 }

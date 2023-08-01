@@ -7,13 +7,9 @@ void LED_Task(void)
 
 	for(i = 0; i < 7; i++)
 	{
-		if (Press == GetButtonState(0))
+		if (Press == GetButtonState(i))
 		{
-			SetLED();
-		}
-		else
-		{
-			ClearLED();
+			HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
 		}
 	}
 }
