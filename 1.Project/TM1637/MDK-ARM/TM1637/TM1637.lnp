@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"tm1637\startup_stm32f103x6.o"
+"tm1637\main.o"
+"tm1637\gpio.o"
+"tm1637\tim.o"
+"tm1637\stm32f1xx_it.o"
+"tm1637\stm32f1xx_hal_msp.o"
+"tm1637\iic.o"
+"tm1637\stm32f1xx_hal_gpio_ex.o"
+"tm1637\stm32f1xx_hal_tim.o"
+"tm1637\stm32f1xx_hal_tim_ex.o"
+"tm1637\stm32f1xx_hal.o"
+"tm1637\stm32f1xx_hal_rcc.o"
+"tm1637\stm32f1xx_hal_rcc_ex.o"
+"tm1637\stm32f1xx_hal_gpio.o"
+"tm1637\stm32f1xx_hal_dma.o"
+"tm1637\stm32f1xx_hal_cortex.o"
+"tm1637\stm32f1xx_hal_pwr.o"
+"tm1637\stm32f1xx_hal_flash.o"
+"tm1637\stm32f1xx_hal_flash_ex.o"
+"tm1637\stm32f1xx_hal_exti.o"
+"tm1637\system_stm32f1xx.o"
+--strict --scatter "TM1637\TM1637.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "TM1637.map" -o TM1637\TM1637.axf
