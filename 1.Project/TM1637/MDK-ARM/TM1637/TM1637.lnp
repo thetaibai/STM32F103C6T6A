@@ -1,11 +1,12 @@
 --cpu Cortex-M3
 "tm1637\startup_stm32f103x6.o"
+"tm1637\iic.o"
 "tm1637\main.o"
 "tm1637\gpio.o"
 "tm1637\tim.o"
 "tm1637\stm32f1xx_it.o"
 "tm1637\stm32f1xx_hal_msp.o"
-"tm1637\iic.o"
+"tm1637\tm1637.o"
 "tm1637\stm32f1xx_hal_gpio_ex.o"
 "tm1637\stm32f1xx_hal_tim.o"
 "tm1637\stm32f1xx_hal_tim_ex.o"

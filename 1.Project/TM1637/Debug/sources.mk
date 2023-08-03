@@ -26,5 +26,6 @@ SUBDIRS := \
 Core/IIC/Core \
 Core/Src \
 Core/Startup \
+Core/TM1637/Core \
 Drivers/STM32F1xx_HAL_Driver/Src \
 

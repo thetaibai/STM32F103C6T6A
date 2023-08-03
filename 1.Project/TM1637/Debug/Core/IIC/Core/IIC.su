@@ -1,1 +1,5 @@
-../Core/IIC/Core/IIC.c:3:6:IIC_Delay_us	16	static,ignoring_inline_asm
+../Core/IIC/Core/IIC.c:5:13:IIC_Delay_us	16	static,ignoring_inline_asm
+../Core/IIC/Core/IIC.c:14:6:IIC_Start	8	static
+../Core/IIC/Core/IIC.c:25:6:IIC_Stop	8	static
+../Core/IIC/Core/IIC.c:40:6:IIC_ACK	8	static
+../Core/IIC/Core/IIC.c:55:6:IIC_WriteByte	24	static

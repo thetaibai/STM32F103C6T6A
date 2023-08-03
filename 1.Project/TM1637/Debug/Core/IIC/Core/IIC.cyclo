@@ -1,1 +1,5 @@
-IIC.c:3:6:IIC_Delay_us	2
+IIC.c:5:13:IIC_Delay_us	2
+IIC.c:14:6:IIC_Start	1
+IIC.c:25:6:IIC_Stop	1
+IIC.c:40:6:IIC_ACK	1
+IIC.c:55:6:IIC_WriteByte	3
