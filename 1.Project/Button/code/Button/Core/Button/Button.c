@@ -30,7 +30,10 @@ void ButtonTask(void)
 	{
 		if (GPIO_PIN_SET == ButtonTable[i].PinState)
 		{
-			ButtonTable[i].Cnt++;
+			if(ButtonTable[i].Cnt <= 3)
+			{
+				ButtonTable[i].Cnt++;
+			}
 		}
 		else if (GPIO_PIN_RESET == ButtonTable[i].PinState)
 		{

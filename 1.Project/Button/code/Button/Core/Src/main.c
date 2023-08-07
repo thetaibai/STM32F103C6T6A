@@ -88,7 +88,7 @@ int main(void)
   MX_GPIO_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
+  HAL_TIM_Base_Start_IT(&htim2);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -98,11 +98,11 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  if(GPIO_PIN_RESET == HAL_GPIO_ReadPin(KEY1_GPIO_Port, KEY1_Pin))
-	  {
-		  HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
-	  }
-	  //OS();
+//	  if(GPIO_PIN_RESET == HAL_GPIO_ReadPin(KEY1_GPIO_Port, KEY1_Pin))
+//	  {
+//		  HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+//	  }
+	  OS();
   }
   /* USER CODE END 3 */
 }
