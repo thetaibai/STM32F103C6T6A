@@ -22,15 +22,64 @@ Dialog DLL:      TCM.DLL V1.14.4.0
  
 <h2>Project:</h2>
 C:\Users\a9077\Desktop\learn\Chip\STM32F103C6T6\STM32F103C6T6A\1.Project\TM1637\MDK-ARM\TM1637.uvprojx
-Project File Date:  08/02/2023
+Project File Date:  08/03/2023
 
 <h2>Output:</h2>
 Build target 'TM1637'
+assembling startup_stm32f103x6.s...
 compiling IIC.c...
-linking...
-Program Size: Code=3848 RO-data=304 RW-data=16 ZI-data=1704  
-FromELF: creating hex file...
-"TM1637\TM1637.axf" - 0 Error(s), 0 Warning(s).
+..\Core\IIC\Core\IIC.c(18): warning:  #188-D: enumerated type mixed with another type
+        IIC_CLK_Set(1);
+..\Core\IIC\Core\IIC.c(19): warning:  #188-D: enumerated type mixed with another type
+        IIC_DIO_Set(1);
+..\Core\IIC\Core\IIC.c(22): warning:  #188-D: enumerated type mixed with another type
+        IIC_DIO_Set(0);
+..\Core\IIC\Core\IIC.c(29): warning:  #188-D: enumerated type mixed with another type
+        IIC_CLK_Set(0);
+..\Core\IIC\Core\IIC.c(31): warning:  #188-D: enumerated type mixed with another type
+        IIC_DIO_Set(0);
+..\Core\IIC\Core\IIC.c(35): warning:  #188-D: enumerated type mixed with another type
+        IIC_CLK_Set(1);
+..\Core\IIC\Core\IIC.c(37): warning:  #188-D: enumerated type mixed with another type
+        IIC_DIO_Set(1);
+..\Core\IIC\Core\IIC.c(44): warning:  #188-D: enumerated type mixed with another type
+        IIC_CLK_Set(0);
+..\Core\IIC\Core\IIC.c(49): warning:  #188-D: enumerated type mixed with another type
+        IIC_CLK_Set(1);
+..\Core\IIC\Core\IIC.c(51): warning:  #188-D: enumerated type mixed with another type
+        IIC_CLK_Set(0);
+..\Core\IIC\Core\IIC.c(63): warning:  #188-D: enumerated type mixed with another type
+                IIC_CLK_Set(0);
+..\Core\IIC\Core\IIC.c(67): warning:  #188-D: enumerated type mixed with another type
+                        IIC_DIO_Set(1);
+..\Core\IIC\Core\IIC.c(71): warning:  #188-D: enumerated type mixed with another type
+                        IIC_DIO_Set(0);
+..\Core\IIC\Core\IIC.c(76): warning:  #188-D: enumerated type mixed with another type
+                IIC_CLK_Set(1);
+..\Core\IIC\Core\IIC.c: 14 warnings, 0 errors
+compiling main.c...
+../Core/Src/main.c(26): error:  #5: cannot open source input file "TM1637.h": No such file or directory
+  #include "TM1637.h"
+../Core/Src/main.c: 0 warnings, 1 error
+compiling gpio.c...
+compiling tim.c...
+compiling stm32f1xx_it.c...
+compiling stm32f1xx_hal_msp.c...
+compiling stm32f1xx_hal_gpio_ex.c...
+compiling stm32f1xx_hal_tim.c...
+compiling stm32f1xx_hal_tim_ex.c...
+compiling stm32f1xx_hal.c...
+compiling stm32f1xx_hal_rcc.c...
+compiling stm32f1xx_hal_rcc_ex.c...
+compiling stm32f1xx_hal_gpio.c...
+compiling stm32f1xx_hal_dma.c...
+compiling stm32f1xx_hal_cortex.c...
+compiling stm32f1xx_hal_pwr.c...
+compiling stm32f1xx_hal_flash.c...
+compiling stm32f1xx_hal_flash_ex.c...
+compiling stm32f1xx_hal_exti.c...
+compiling system_stm32f1xx.c...
+"TM1637\TM1637.axf" - 1 Error(s), 14 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -49,6 +98,7 @@ Package Vendor: ARM
 
    * Component: ARM::CMSIS:CORE:3.40.0
       Source file:   CMSIS\UserCodeTemplates\ARM\ITM_Retarget.c
+Target not created.
 </pre>
 </body>
 </html>

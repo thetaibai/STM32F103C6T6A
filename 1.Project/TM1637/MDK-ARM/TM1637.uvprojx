@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103x6</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\Core\IIC\Config;..\Core\IIC\Core</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../Core/IIC/Config;../Core/IIC/Core</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -419,6 +419,21 @@
           <GroupName>Application/User/Core</GroupName>
           <Files>
             <File>
+              <FileName>IIC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\IIC\Core\IIC.c</FilePath>
+            </File>
+            <File>
+              <FileName>IIC.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\IIC\Core\IIC.h</FilePath>
+            </File>
+            <File>
+              <FileName>IIC_Cfg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\IIC\Config\IIC_Cfg.h</FilePath>
+            </File>
+            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/main.c</FilePath>
@@ -444,19 +459,19 @@
               <FilePath>../Core/Src/stm32f1xx_hal_msp.c</FilePath>
             </File>
             <File>
-              <FileName>IIC.c</FileName>
+              <FileName>TM1637.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Core\IIC\Core\IIC.c</FilePath>
+              <FilePath>..\Core\TM1637\Core\TM1637.c</FilePath>
             </File>
             <File>
-              <FileName>IIC.h</FileName>
+              <FileName>TM1637.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\Core\IIC\Core\IIC.h</FilePath>
+              <FilePath>..\Core\TM1637\Core\TM1637.h</FilePath>
             </File>
             <File>
-              <FileName>IIC_Cfg.h</FileName>
+              <FileName>TM1637_Cfg.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\Core\IIC\Config\IIC_Cfg.h</FilePath>
+              <FilePath>..\Core\TM1637\Config\TM1637_Cfg.h</FilePath>
             </File>
           </Files>
         </Group>
