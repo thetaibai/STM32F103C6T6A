@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"configtest\startup_stm32f103x6.o"
+"configtest\main.o"
+"configtest\gpio.o"
+"configtest\iwdg.o"
+"configtest\tim.o"
+"configtest\stm32f1xx_it.o"
+"configtest\stm32f1xx_hal_msp.o"
+"configtest\stm32f1xx_hal_gpio_ex.o"
+"configtest\stm32f1xx_hal_iwdg.o"
+"configtest\stm32f1xx_hal.o"
+"configtest\stm32f1xx_hal_rcc.o"
+"configtest\stm32f1xx_hal_rcc_ex.o"
+"configtest\stm32f1xx_hal_gpio.o"
+"configtest\stm32f1xx_hal_dma.o"
+"configtest\stm32f1xx_hal_cortex.o"
+"configtest\stm32f1xx_hal_pwr.o"
+"configtest\stm32f1xx_hal_flash.o"
+"configtest\stm32f1xx_hal_flash_ex.o"
+"configtest\stm32f1xx_hal_exti.o"
+"configtest\stm32f1xx_hal_tim.o"
+"configtest\stm32f1xx_hal_tim_ex.o"
+"configtest\system_stm32f1xx.o"
+--strict --scatter "ConfigTest\ConfigTest.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "ConfigTest.map" -o ConfigTest\ConfigTest.axf
